@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-import tkinter as tk
-print('branch is dev not master')
-=======
 
 
 import tkinter as tk
 from PIL import Image, ImageTk
 
 allowed = True
->>>>>>> master
 class Shape:
     def __init__(self,x,y):
         self._x = x
