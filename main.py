@@ -100,17 +100,27 @@ class App():
         self._new_screen = False
         root.minsize(height=500,width=500)
         root.resizable(False,False)
+
         square = Image.open("square.png")
-        photo = ImageTk.PhotoImage(square)
+        square = square.resize((90,90))
+        square_photo = ImageTk.PhotoImage(square)
+        square = tk.Label(root,image=square_photo)
+        square.image = square_photo
+        square.place(x=210,y=50)
 
-        square = tk.Label(root,bg='blue',image=photo,height=100,width=100)
-        square.pack(ipadx=10,ipady=10,side=tk.TOP,pady=10)
+        rectangle = Image.open("rectangular.png")
+        rectangle = rectangle.resize((140,140))
+        rectangle_photo = ImageTk.PhotoImage(rectangle)
+        rectangle = tk.Label(root,image=rectangle_photo)
+        rectangle.image = rectangle_photo
+        rectangle.place(x=190,y=180)
 
-        rectangle= tk.Label(root,bg='pink',image=photo,height=100,width=100)
-        rectangle.pack(ipadx=10,ipady=10,side=tk.TOP,pady=10)
-
-        triangle= tk.Label(root,bg='orange',image=photo,height=100,width=100)
-        triangle.pack(ipadx=10,ipady=10,side=tk.TOP,pady=10)
+        triangle = Image.open("triangle.png")
+        triangle = triangle.resize((110,110))
+        triangle_photo = ImageTk.PhotoImage(triangle)
+        triangle= tk.Label(root,image=triangle_photo)
+        triangle.image = triangle_photo
+        triangle.place(x=210,y=350)
 
         square.bind('<Button-1>', lambda banana:self.on_click('square'))
         rectangle.bind('<Button-1>', lambda banana:self.on_click('rectangle'))
