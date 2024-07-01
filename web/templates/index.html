@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>click on the images below</h2>
+
+
+<a href="{{ url_for('square') }}"><img src="{{url_for('static', filename='square.png')}}" style="position:relative;left:100px;width:42px;height:42px;"></a>
+
+
+<a href="{{ url_for('rectangle') }}"><img src="{{url_for('static', filename='rectangular.png')}}" style="position:relative;right:40px;width:42px;height:42px;"></a>
+<a href="{{ url_for('triangle') }}"><img src="{{url_for('static', filename='triangle.png')}}" style="position:relative;left:150px;width:42px;height:42px;"></a>
+</body>
+</html>
+
